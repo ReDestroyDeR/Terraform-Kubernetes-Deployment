@@ -1,0 +1,10 @@
+hostname="kubenode"
+domain="kubenode.com"
+m_memoryMB=2048
+m_cpu=2
+w_memoryMB=4096
+w_cpu=4
+masters=1
+workers=2
+base_gb=10
+data_gb=20

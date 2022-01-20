@@ -13,6 +13,6 @@ do
   get_out $target
   for index in ${!global_arr[@]}
   do
-    virsh start $( echo $target | sed "s/_.*/-node-$index/" | sed 's/master-node/kube-master/' | sed 's/worker-node/kube-worker/' )
+    sudo virsh start $( echo $target | sed "s/_.*/-node-$index/" | sed 's/master-node/kube-master/' | sed 's/worker-node/kube-worker/' )
   done
 done

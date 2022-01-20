@@ -51,10 +51,7 @@ printf "\n"
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   terraform apply -var-file=main.tfvars
-  printf "${LIGHT_GREEN}=== Waiting for start of SSH Servers and start of Docker Daemon ===\n"
-  sleep 15
-  printf "${LIGHT_GREEN}Trying installing Rancher Agent on target Virutal Machines\n"
-  ./register-rancher.sh
+  printf "${LIGHT_GREEN}=== ${YELLOW}Finished creating Virtual Machines ${LIGHT_GREEN}===\n"
 else
-  printf "Aborting VM install"
+  printf "${YELLOW}--- ${LIGHT_RED}Aborting VM install ${YELLOW}---"
 fi

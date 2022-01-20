@@ -9,7 +9,7 @@ To configure deployment:
 
 P.S. Util scripts containing `virsh` calls `sudo` inside because installation uri is `qemu:///system` (Can be changed in libvirt conviguration in `main.tf`)
 Networking is done via creating new network `kube` and IP distribution is done via `dhcp4` It can lead to problems with MetalLB.
-If you want to use MetalLB with different ip range, than of `kube` subnet, you must do necessary routing by yourself. This repository doesn't cover it (yet)
+If you want to use MetalLB with different ip range, than of `kube` subnet, you must do necessary routing by yourself. This repository doesn't cover it (yet)<br>
 If you don't want to - just specify address range matching the one of subnet. You can find MetalLB configuration in `kubespray/inventory/cluster/group_vars/addons.yml` or you can change it later via `kubectl edit configmap -n metallb-system config`
 P.S.S. MetalLB Readiness probe may be failing due to: strconv.Atoi: parsing "metrics": invalid syntax (but the pods are working eventually, haven't worked it out yet)
 

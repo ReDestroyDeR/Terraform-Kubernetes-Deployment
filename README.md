@@ -17,5 +17,6 @@ Everything here is a subject to change
 Reasoning behind this repo is basically to store history of my attempts in creating personal cluster
 (Many of which are forever erased)
 
+You're free to use any of these! I hope these snippets of mine will help somebody)
+
 Kubespray is licensed under Apache 2.0 License
-You're free to use any of these! I hope these snippets of mine will help somebody

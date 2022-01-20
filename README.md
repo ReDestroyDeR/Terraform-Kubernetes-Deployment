@@ -5,6 +5,7 @@ To configure deployment:
 - Edit `main.tfvars` to your needs
 - Start `./terraform-install.sh`
 - I recommend using kubespray to install k8s. My configuration is included in kubespray/inventory/cluster.<br>My kubespray configuration uses: flannel, metallb, dashboard and local-path-provisioner
+- You **MUST** change node IP addresses in `inventory.ini` to IPs returned by `terraform output`
 - To start kubespray: `cd kubespray` `ansible-playbook -i inventory/cluster/inventory.ini --user cmemb --become --become-user=root --private-key ~/.ssh/id_rsa cluster.yml`
 
 P.S. Util scripts containing `virsh` calls `sudo` inside because installation uri is `qemu:///system` (Can be changed in libvirt conviguration in `main.tf`)
